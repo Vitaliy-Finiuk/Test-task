@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3985758689579977104}
   - component: {fileID: 3985758689579977105}
-  - component: {fileID: 5330721134884346091}
+  - component: {fileID: 289836590613421287}
   - component: {fileID: 130271785151216261}
   - component: {fileID: 7815982005874066443}
   m_Layer: 0
@@ -129,7 +129,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!195 &5330721134884346091
+--- !u!195 &289836590613421287
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,7 +138,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 3985758689579977106}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.65
+  m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -147,8 +147,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.92
-  m_BaseOffset: 0.48
+  m_Height: 2
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &130271785151216261
@@ -175,7 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39db8c23747e6d340a4cb177e9e7c2a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
 --- !u!1 &3985758690375980814
 GameObject:
   m_ObjectHideFlags: 0

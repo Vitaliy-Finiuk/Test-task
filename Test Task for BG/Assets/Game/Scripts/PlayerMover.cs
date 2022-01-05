@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class PlayerMover : MonoBehaviour
 {
     private Transform _target;
-
     private NavMeshAgent _navMeshAgent;
     private void Start() {
         _navMeshAgent =  GetComponent<NavMeshAgent>();
