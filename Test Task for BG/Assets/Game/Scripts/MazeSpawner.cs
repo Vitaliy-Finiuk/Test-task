@@ -4,9 +4,9 @@ public class MazeSpawner : MonoBehaviour
 {
 
     [SerializeField] private NavMeshSurface _surface;
-    [SerializeField] private Cell CellPrefab;
-    [SerializeField] private Vector3 CellSize = new Vector3(1,1,0);
-    [SerializeField] private Maze maze;
+    [SerializeField] private Cell _cellPrefab;
+    [SerializeField] private Vector3 _cellSize = new Vector3(1,1,0);
+    [SerializeField] private Maze _maze;
 
     private Renderer _renderer;
 
@@ -20,16 +20,16 @@ public class MazeSpawner : MonoBehaviour
 
     private void SpawnWall(){
         MazeGenerator generator = new MazeGenerator();
-        maze = generator.GenerateMaze();
+        _maze = generator.GenerateMaze();
 
-        for (int x = 0; x < maze.cells.GetLength(0); x++)
+        for (int x = 0; x < _maze.cells.GetLength(0); x++)
         {
-            for (int y = 0; y < maze.cells.GetLength(1); y++)
+            for (int y = 0; y < _maze.cells.GetLength(1); y++)
             {
-                Cell c = Instantiate(CellPrefab, new Vector3(x * CellSize.x, y * CellSize.y, y * CellSize.z), Quaternion.identity, transform);
+                Cell c = Instantiate(_cellPrefab, new Vector3(x * _cellSize.x, y * _cellSize.y, y * _cellSize.z), Quaternion.identity, transform);
 
-                c.WallLeft.SetActive(maze.cells[x, y].WallLeft);
-                c.WallBottom.SetActive(maze.cells[x, y].WallBottom);
+                c.WallLeft.SetActive(_maze.cells[x, y].WallLeft);
+                c.WallBottom.SetActive(_maze.cells[x, y].WallBottom);
             }
         }
     }
