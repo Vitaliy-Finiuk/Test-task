@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _deathZone = FindObjectOfType<DeathZone>().gameObject.transform;
+        // _deathZone = FindObjectOfType<DeathZone>().gameObject.transform;
         _greenZone = FindObjectOfType<GreenZone>().gameObject.transform;
     }
 
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 
     private void LevelComplete(){
         float distance = Vector3.Distance(transform.position, _greenZone.position);
-        if(distance < 0.2f){
+        if(distance < 1f){
             Debug.Log(distance);
             _eventOnWon.Invoke();
         }  
